@@ -63,7 +63,6 @@
         <!--Navigation Controller-->
         <scene sceneID="thY-1a-lHt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6xk-5f-IWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="tcQ-sy-zbs" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Lf-Xg-hbZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -73,6 +72,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VrR-I7-9EL"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xk-5f-IWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183" y="109"/>
         </scene>
@@ -104,17 +104,23 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6v-uT-rct">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-3A-bM9">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d6v-uT-rct" firstAttribute="top" secondItem="T5Q-Sm-kCg" secondAttribute="top" id="22p-gv-Is7"/>
                             <constraint firstItem="d6v-uT-rct" firstAttribute="bottom" secondItem="g0D-d5-pB5" secondAttribute="top" id="EWh-WX-cEw"/>
                             <constraint firstItem="d6v-uT-rct" firstAttribute="leading" secondItem="T5Q-Sm-kCg" secondAttribute="leading" id="QTv-XX-OyK"/>
+                            <constraint firstItem="kVl-3A-bM9" firstAttribute="centerX" secondItem="T5Q-Sm-kCg" secondAttribute="centerX" id="fU5-1E-VJ9"/>
                             <constraint firstAttribute="trailing" secondItem="d6v-uT-rct" secondAttribute="trailing" id="o32-dQ-aK2"/>
+                            <constraint firstItem="kVl-3A-bM9" firstAttribute="centerY" secondItem="T5Q-Sm-kCg" secondAttribute="centerY" id="wsT-fE-wNz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="d6v-uT-rct" id="um4-pl-90i"/>
+                        <outlet property="spinner" destination="kVl-3A-bM9" id="8tV-bm-1IH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBx-qc-i67" userLabel="First Responder" sceneMemberID="firstResponder"/>
